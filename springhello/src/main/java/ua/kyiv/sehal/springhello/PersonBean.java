@@ -26,6 +26,4 @@ public class PersonBean {
 		this.age = age;
 	}
 	
-	
-
 }
