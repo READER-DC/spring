@@ -9,6 +9,14 @@
       <bean id="WindowBean"
       		class="ua.kyiv.sehal.springDIxml.PlasticFrameWindow" >
       </bean>
+      <bean id="BricksWallBean"
+      		class="ua.kyiv.sehal.springDIxml.BricksWall"
+      		scope="prototype"
+      		>
+      </bean>
+      <bean id="WoodWallBean"
+      		class="ua.kyiv.sehal.springDIxml.WoodWall" >
+      </bean>
       <bean id="HouseBean"
       		class="ua.kyiv.sehal.springDIxml.House">
       		<constructor-arg ref="WindowBean"/>
@@ -16,6 +24,13 @@
       		<constructor-arg value="3"/>
       		-->
       		<property name="Height" value="2"/>
+      		<property name="Wall" ref="BricksWallBean"/>
+      </bean>
+      <bean id="MainWindowBean"
+      		class="ua.kyiv.sehal.springDIxml.MainWindow" 
+      		factory-method="getInstance"
+      		init-method="openConnection"
+      		destroy-method="closeConnection">
       </bean>
 
 </beans>

@@ -4,7 +4,7 @@ public class WoodFrameWindow implements Window {
 
 	@Override
 	public void open() {
-		System.out.println("WoodFrameWindow is opened!");
+		System.out.print("WoodFrameWindow is opened!");
 		
 	}
 	
